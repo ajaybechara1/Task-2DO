@@ -5,9 +5,18 @@ import org.springframework.stereotype.Component;
 @Component
 public class Task {
 
+    private int tasknumber;
     private String taskName;
     private String taskDate;
     private boolean taskdone;
+
+    public int getTasknumber() {
+        return tasknumber;
+    }
+
+    public void setTasknumber(int tasknumber) {
+        this.tasknumber = tasknumber;
+    }
 
     public String getTaskName() {
         return taskName;
@@ -33,13 +42,24 @@ public class Task {
         this.taskdone = taskdone;
     }
 
-    public Task(String taskName, String taskDate, boolean taskdone) {
+    public Task(int tasknumber, String taskName, String taskDate, boolean taskdone) {
+        this.tasknumber = tasknumber;
         this.taskName = taskName;
         this.taskDate = taskDate;
         this.taskdone = taskdone;
     }
 
     public Task() {
+    }
+
+    @Override
+    public String toString() {
+        return "Task{" +
+                "tasknumber=" + tasknumber +
+                ", taskName='" + taskName + '\'' +
+                ", taskDate='" + taskDate + '\'' +
+                ", taskdone=" + taskdone +
+                '}';
     }
 
     //    private String task1;

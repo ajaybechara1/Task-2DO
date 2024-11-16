@@ -5,64 +5,64 @@ import org.springframework.stereotype.Component;
 @Component
 public class Task {
 
-    private int tasknumber;
-    private String taskName;
-    private String taskDate;
-    private boolean taskdone;
+  private int tasknumber;
+  private String taskName;
+  private String taskDate;
+  private boolean taskdone;
 
-    public int getTasknumber() {
-        return tasknumber;
-    }
+  public Task(int tasknumber, String taskName, String taskDate, boolean taskdone) {
+    this.tasknumber = tasknumber;
+    this.taskName = taskName;
+    this.taskDate = taskDate;
+    this.taskdone = taskdone;
+  }
 
-    public void setTasknumber(int tasknumber) {
-        this.tasknumber = tasknumber;
-    }
+  public Task() {
+  }
 
-    public String getTaskName() {
-        return taskName;
-    }
+  public int getTasknumber() {
+    return tasknumber;
+  }
 
-    public void setTaskName(String taskName) {
-        this.taskName = taskName;
-    }
+  public void setTasknumber(int tasknumber) {
+    this.tasknumber = tasknumber;
+  }
 
-    public String getTaskDate() {
-        return taskDate;
-    }
+  public String getTaskName() {
+    return taskName;
+  }
 
-    public void setTaskDate(String taskDate) {
-        this.taskDate = taskDate;
-    }
+  public void setTaskName(String taskName) {
+    this.taskName = taskName;
+  }
 
-    public boolean isTaskdone() {
-        return taskdone;
-    }
+  public String getTaskDate() {
+    return taskDate;
+  }
 
-    public void setTaskdone(boolean taskdone) {
-        this.taskdone = taskdone;
-    }
+  public void setTaskDate(String taskDate) {
+    this.taskDate = taskDate;
+  }
 
-    public Task(int tasknumber, String taskName, String taskDate, boolean taskdone) {
-        this.tasknumber = tasknumber;
-        this.taskName = taskName;
-        this.taskDate = taskDate;
-        this.taskdone = taskdone;
-    }
+  public boolean isTaskdone() {
+    return taskdone;
+  }
 
-    public Task() {
-    }
+  public void setTaskdone(boolean taskdone) {
+    this.taskdone = taskdone;
+  }
 
-    @Override
-    public String toString() {
-        return "Task{" +
-                "tasknumber=" + tasknumber +
-                ", taskName='" + taskName + '\'' +
-                ", taskDate='" + taskDate + '\'' +
-                ", taskdone=" + taskdone +
-                '}';
-    }
+  @Override
+  public String toString() {
+    return "Task{" +
+      "tasknumber=" + tasknumber +
+      ", taskName='" + taskName + '\'' +
+      ", taskDate='" + taskDate + '\'' +
+      ", taskdone=" + taskdone +
+      '}';
+  }
 
-    //    private String task1;
+  //    private String task1;
 //
 //    private String task2;
 //    private String task3;

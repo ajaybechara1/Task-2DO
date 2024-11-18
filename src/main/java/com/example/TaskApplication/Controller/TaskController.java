@@ -25,7 +25,7 @@ public class TaskController {
   }
 
   @GetMapping("/task/{tasknumber}")
-  public Task gettaskbynumber(@PathVariable int tasknumber) {
+  public Task gettaskbynumber(@PathVariable Integer tasknumber) {
     return taskService.gettaskbynumber(tasknumber);
   }
 
@@ -40,7 +40,7 @@ public class TaskController {
   }
 
   @DeleteMapping("/task/{tasknumber}")
-  public void deletetask(@PathVariable int tasknumber) {
+  public void deletetask(@PathVariable Integer tasknumber) {
     taskService.deletetask(tasknumber);
   }
 

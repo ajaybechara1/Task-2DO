@@ -1,16 +1,22 @@
 package com.example.TaskApplication.Modal;
 
-import org.springframework.stereotype.Component;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import lombok.Data;
 
-@Component
+
+
+@Entity
+@Data
 public class Task {
 
-  private int tasknumber;
+  @Id
+  private Integer tasknumber;
   private String taskName;
   private String taskDate;
   private boolean taskdone;
 
-  public Task(int tasknumber, String taskName, String taskDate, boolean taskdone) {
+  public Task(Integer tasknumber, String taskName, String taskDate, boolean taskdone) {
     this.tasknumber = tasknumber;
     this.taskName = taskName;
     this.taskDate = taskDate;
@@ -24,7 +30,7 @@ public class Task {
     return tasknumber;
   }
 
-  public void setTasknumber(int tasknumber) {
+  public void setTasknumber(Integer tasknumber) {
     this.tasknumber = tasknumber;
   }
 
@@ -62,62 +68,8 @@ public class Task {
       '}';
   }
 
-  //    private String task1;
-//
-//    private String task2;
-//    private String task3;
-//    private String task4;
-//    private String task5;
-//
-//
-//    public String getTask1() {
-//        return task1;
-//    }
-//
-//    public void setTask1(String task1) {
-//        this.task1 = task1;
-//    }
-//
-//    public String getTask2() {
-//        return task2;
-//    }
-//
-//    public void setTask2(String task2) {
-//        this.task2 = task2;
-//    }
-//
-//    public String getTask3() {
-//        return task3;
-//    }
-//
-//    public void setTask3(String task3) {
-//        this.task3 = task3;
-//    }
-//
-//    public String getTask4() {
-//        return task4;
-//    }
-//
-//    public void setTask4(String task4) {
-//        this.task4 = task4;
-//    }
-//
-//    public String getTask5() {
-//        return task5;
-//    }
-//
-//    public void setTask5(String task5) {
-//        this.task5 = task5;
-//    }
-//
-//    public Task(String task1, String task2, String task3, String task4, String task5) {
-//        this.task1 = task1;
-//        this.task2 = task2;
-//        this.task3 = task3;
-//        this.task4 = task4;
-//        this.task5 = task5;
-//    }
-//
-//    public Task() {
-//    }
+  public void orElse(Task task) {
+    System.out.println("Not a task");
+  }
 }
+

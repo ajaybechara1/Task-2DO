@@ -8,4 +8,6 @@ import org.springframework.stereotype.Repository;
 public interface TaskRepo extends JpaRepository<Task,Integer>{
 
   Task findByTasknumber(Integer tasknumber);
+
+
 }

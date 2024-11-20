@@ -12,8 +12,12 @@ import java.util.List;
 @Service
 public class TaskService {
 
-  @Autowired
+
   TaskRepo repo;
+
+  public TaskService(TaskRepo repo) {
+    this.repo = repo;
+  }
 
 //  List<Task> tasks = Arrays.asList(
 //    new Task(1, "Leetcode 5 Questions", "14/11/2024", true),

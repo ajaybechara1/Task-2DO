@@ -3,10 +3,8 @@ package com.example.TaskApplication.Service;
 
 import com.example.TaskApplication.Modal.Task;
 import com.example.TaskApplication.repository.TaskRepo;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Arrays;
 import java.util.List;
 
 @Service
@@ -31,16 +29,17 @@ public class TaskService {
     return repo.findAll();
   }
 
-  public void addtask(Task task) {
-    repo.save(task);
+  public Task addtask(Task task) {
+    return repo.save(task);
   }
 
   public Task gettaskbynumber(Integer tasknumber) {
-     return repo.findByTasknumber(tasknumber);
+    return repo.findByTasknumber(tasknumber);
   }
 
-  public void updatetask(Task task) {
-    repo.save(task);
+  public Task updatetask(Task task) {
+    return repo.save(task);
+
   }
 
   public void deletetask(Integer tasknumber) {

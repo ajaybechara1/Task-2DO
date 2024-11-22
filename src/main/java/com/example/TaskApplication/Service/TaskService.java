@@ -30,17 +30,16 @@ public class TaskService {
   }
 
   public Task addtask(Task task) {
-    repo.save(task);
-    return task;
+    return repo.save(task);
   }
 
   public Task gettaskbynumber(Integer tasknumber) {
-     return repo.findByTasknumber(tasknumber);
+    return repo.findByTasknumber(tasknumber);
   }
 
   public Task updatetask(Task task) {
-    repo.save(task);
-    return task;
+    return repo.save(task);
+
   }
 
   public void deletetask(Integer tasknumber) {

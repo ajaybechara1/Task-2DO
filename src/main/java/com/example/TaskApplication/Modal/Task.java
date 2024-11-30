@@ -4,72 +4,35 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import lombok.Data;
 
-
-
 @Entity
 @Data
 public class Task {
 
   @Id
-  private Integer tasknumber;
+  private Integer taskNumber;
   private String taskName;
   private String taskDate;
-  private boolean taskdone;
+  private boolean taskDone;
 
-  public Task(Integer tasknumber, String taskName, String taskDate, boolean taskdone) {
-    this.tasknumber = tasknumber;
+  public Task(Integer taskNumber, String taskName, String taskDate, boolean taskDone) {
+    this.taskNumber = taskNumber;
     this.taskName = taskName;
     this.taskDate = taskDate;
-    this.taskdone = taskdone;
+    this.taskDone = taskDone;
   }
 
   public Task() {
   }
 
-  public int getTasknumber() {
-    return tasknumber;
-  }
-
-  public void setTasknumber(Integer tasknumber) {
-    this.tasknumber = tasknumber;
-  }
-
-  public String getTaskName() {
-    return taskName;
-  }
-
-  public void setTaskName(String taskName) {
-    this.taskName = taskName;
-  }
-
-  public String getTaskDate() {
-    return taskDate;
-  }
-
-  public void setTaskDate(String taskDate) {
-    this.taskDate = taskDate;
-  }
-
-  public boolean isTaskdone() {
-    return taskdone;
-  }
-
-  public void setTaskdone(boolean taskdone) {
-    this.taskdone = taskdone;
-  }
-
   @Override
   public String toString() {
     return "Task{" +
-      "tasknumber=" + tasknumber +
-      ", taskName='" + taskName + '\'' +
-      ", taskDate='" + taskDate + '\'' +
-      ", taskdone=" + taskdone +
-      '}';
+        "taskNumber=" + taskNumber +
+        ", taskName='" + taskName + '\'' +
+        ", taskDate='" + taskDate + '\'' +
+        ", taskDone=" + taskDone +
+        '}';
   }
 
-  public void orElse(Task task) {
-    System.out.println("Not a task");
-  }
 }
 

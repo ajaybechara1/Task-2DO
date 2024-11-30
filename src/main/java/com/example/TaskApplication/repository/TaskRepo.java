@@ -5,9 +5,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface TaskRepo extends JpaRepository<Task,Integer>{
+public interface TaskRepo extends JpaRepository<Task, Integer> {
 
-  Task findByTasknumber(Integer tasknumber);
-
+  Task findByTaskNumber(Integer taskNumber);
 
 }

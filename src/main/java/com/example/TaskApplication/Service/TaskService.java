@@ -3,11 +3,13 @@ package com.example.TaskApplication.Service;
 import com.example.TaskApplication.Modal.Task;
 import com.example.TaskApplication.repository.TaskRepo;
 import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class TaskService {
 
+  @Autowired
   TaskRepo repo;
 
   public TaskService(TaskRepo repo) {

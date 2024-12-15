@@ -1,6 +1,8 @@
 package com.example.TaskApplication.Modal;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.Data;
 
@@ -9,6 +11,7 @@ import lombok.Data;
 public class Task {
 
   @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Integer taskNumber;
   private String taskName;
   private String taskDate;
